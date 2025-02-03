@@ -3,48 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Profound-ish AI Quote Generator</title>
   </head>
   <body>
-    <header>
-      <h1>
-        Profound-ish <br />
-        AI Quote Generator
-      </h1>
-    </header>
+    <div class="container">
+      <header>
+        <h1>
+          Profound-ish <br />
+          AI Quote Generator
+        </h1>
+      </header>
 
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of the quote"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <div>
-        The quote will go here
-        <br />
-        The quote will go here
-      </div>
-    </main>
-    <footer>
-      <strong>Profound-<em>ish</em></strong> was coded with 💜 by
-      <a href="https://github.com/mrsbrightside001" target="_blank"> Stefanie</a
-      >, is
-      <a
-        href="https://github.com/mrsbrightside001/quote-generator"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://profound-ish.netlify.app/" target="_blank">
-        hosted on Netlify</a
-      >.
-    </footer>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter the topic of the quote"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" value="Generate!" />
+        </form>
+        <div class="quote">
+          The quote will go here
+          <br />
+          The quote will go here
+        </div>
+      </main>
+      <footer>
+        <strong>Profound-<em>ish</em></strong> was coded with 💜 by
+        <a href="https://github.com/mrsbrightside001" target="_blank">
+          Stefanie</a
+        >,<br />is
+        <a
+          href="https://github.com/mrsbrightside001/quote-generator"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://profound-ish.netlify.app/" target="_blank">
+          hosted on Netlify</a
+        >.
+      </footer>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
