@@ -5,7 +5,7 @@ body {
     rgba(162, 142, 222, 0.34) 74.6%
   );
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-attachment: fixed;
   font-family: "Merriweather", serif;
 }
 img {
@@ -77,4 +77,7 @@ footer {
   line-height: 2;
   border-left: 3px solid #4eafc6;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.03);
+}
+.quote strong {
+  color: #8444a0;
 }
