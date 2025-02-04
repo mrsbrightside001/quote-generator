@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Profound-ish AI Quote Generator</title>
   </head>
@@ -22,7 +23,7 @@
       </header>
 
       <main>
-        <form>
+        <form id="quote-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of the quote"
@@ -37,11 +38,7 @@
             value="Generate AI Quote!"
           />
         </form>
-        <div class="quote">
-          The quote will go here
-          <br />
-          The quote will go here
-        </div>
+        <div class="quote" id="quote"></div>
       </main>
       <footer>
         <strong>Profound-<em>ish</em></strong> was coded with 💜 by
