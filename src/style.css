@@ -31,12 +31,7 @@ h1 {
 }
 
 form {
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.38);
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-  border-radius: 10px;
   display: flex;
-  margin-bottom: 30px;
 }
 
 footer {
@@ -49,6 +44,19 @@ footer {
   margin: 120px auto;
   margin-top: 80px;
   max-width: 600px;
+}
+.form-container {
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.38);
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.hint {
+  line-height: 1.5;
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.6;
 }
 
 .prompt {
@@ -78,6 +86,23 @@ footer {
   border-left: 3px solid #4eafc6;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.03);
 }
+.hidden {
+  display: none;
+}
 .quote strong {
   color: #8444a0;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
 }

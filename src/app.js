@@ -19,8 +19,13 @@ function generateQuote(event) {
 
   let apiKey = "tb561b9af40b32focb07736aa7b1c96e";
   let prompt = `Generate a profound quote about ${userInput.value}`;
-  let context = `You are an expert on witty, sarcastic and inspirational quotes. You love to write short and profound quotes to inspire people and help them feel energized and motivated. Your mission is to generate an inspiring and wise quote in 2 lines in basic HTML, e.g. <p>this is a quote<p>. Do not use markdown. Make sure to follow the user instructions. Add an author/a famous person of your choice in the fifth line that you credit the quote to in the format <strong>- Coco Chanel on "${userInputFormatted}"</strong>. Choose a famous celebrity, artist, actor, musician other than Coco Chanel.`;
+  let context = `You are an expert on witty, sarcastic and inspirational quotes. You love to write short and profound quotes to inspire people and help them feel energized and motivated. Your mission is to generate an inspiring and wise quote in 2 lines in basic HTML, e.g. <p>this is a quote<p>. Separate each line with a <br />. Do not use markdown. Do not add unnecessary empty lines. Make sure to follow the user instructions. Add an author/a famous person of your choice in the fifth line that you credit the quote to in the format <strong>- Coco Chanel on "${userInputFormatted}"</strong>. Choose a famous celebrity, artist, actor, musician other than Coco Chanel.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let quoteElementVisibility = document.querySelector("#quote");
+  quoteElementVisibility.classList.remove("hidden");
+
+  quoteElementVisibility.innerHTML = `<div class="generating">⏳ Gathering profound thoughts about ${userInput.value}...</div>`;
 
   console.log("Generating quote");
   console.log(`Prompt: ${prompt}`);
